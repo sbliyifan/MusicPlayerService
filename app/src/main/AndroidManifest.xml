@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        读取音乐文件所需的权限：
+        - Android 13（API 33）及以上：READ_MEDIA_AUDIO
+        - Android 12 及以下：READ_EXTERNAL_STORAGE
+        两个都声明，运行时再按版本申请对应的那个（见 MainActivity.requestPermission）。
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- 前台服务 + 通知：Android 13 起发通知要 POST_NOTIFICATIONS，Android 14 起服务要声明类型 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicPlayer">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            音乐播放服务。
+            foregroundServiceType="mediaPlayback" 是 Android 14（API 34）的强制要求，
+            否则启动前台服务会抛 MissingForegroundServiceTypeException。
+        -->
+        <service
+            android:name=".player.MusicService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+    </application>
+
+</manifest>

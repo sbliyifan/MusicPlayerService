@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#5B4BE0</color>
+    <color name="brand_dark">#4335B8</color>
+    <color name="brand_light">#7C6BF0</color>
+    <color name="page_bg">#F5F6FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#1E1B4B</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_muted">#A0A6B8</color>
+    <color name="divider">#EDEFF5</color>
+    <color name="player_bg_start">#5B4BE0</color>
+    <color name="player_bg_end">#8E7BFF</color>
+</resources>

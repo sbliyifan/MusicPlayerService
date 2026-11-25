@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APP 标题 = 姓名 + 学号（按提交要求） -->
+    <string name="app_name">李易凡2024110517</string>
+
+    <!-- 播放器面板 -->
+    <string name="default_song_title">未在播放</string>
+    <string name="default_song_artist">请从下方列表选择歌曲</string>
+    <string name="time_zero">00:00</string>
+
+    <!-- 控制按钮 -->
+    <string name="action_play">播放</string>
+    <string name="action_pause">暂停</string>
+    <string name="action_previous">上一首</string>
+    <string name="action_next">下一首</string>
+    <string name="action_stop">停止</string>
+
+    <!-- 列表与提示 -->
+    <string name="list_header">音乐列表</string>
+    <string name="msg_scanning">正在扫描设备中的音乐…</string>
+    <string name="msg_no_music">设备中没有找到音乐文件\n请先往手机里放几首 mp3 再打开</string>
+    <string name="msg_permission_denied">未授予读取音乐权限，无法扫描歌曲\n请在系统设置中开启后重新进入</string>
+    <string name="state_playing">播放中</string>
+    <string name="state_paused">已暂停</string>
+
+    <!-- 通知栏 -->
+    <string name="notification_channel_name">音乐播放</string>
+    <string name="notification_channel_desc">显示当前播放的歌曲</string>
+    <string name="notification_content">%1$s · %2$s</string>
+
+</resources>
